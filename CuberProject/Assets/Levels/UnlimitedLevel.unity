@@ -2894,7 +2894,7 @@ PrefabInstance:
     - target: {fileID: 4223933264679667763, guid: 317c97f6f1123e040bb9d56c5812bfb7,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4223933264679667763, guid: 317c97f6f1123e040bb9d56c5812bfb7,
         type: 3}
@@ -2960,7 +2960,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[5].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b2ab53584cc03cb479d1d18dcf888939, type: 3}
+      objectReference: {fileID: 8300000, guid: ebf8dc4e3af2ca841943831d7cd5c340, type: 3}
     - target: {fileID: 4223933264679667763, guid: 317c97f6f1123e040bb9d56c5812bfb7,
         type: 3}
       propertyPath: sounds.Array.data[5].loop
@@ -2969,7 +2969,7 @@ PrefabInstance:
     - target: {fileID: 4223933264679667763, guid: 317c97f6f1123e040bb9d56c5812bfb7,
         type: 3}
       propertyPath: sounds.Array.data[5].name
-      value: MusicForUnlimitedLevel6
+      value: MusicForUnlimitedLevel5
       objectReference: {fileID: 0}
     - target: {fileID: 4223933264679667763, guid: 317c97f6f1123e040bb9d56c5812bfb7,
         type: 3}
@@ -4620,7 +4620,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.08e-43, y: NaN, z: 6.08e-43, w: 1.0267483e+28}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.5e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

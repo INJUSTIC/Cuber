@@ -50,7 +50,7 @@ public class StartGame : MonoBehaviour
             FindObjectOfType<Score>().GetComponent<TextMeshProUGUI>().enabled = true;
             StartCoroutine(FindObjectOfType<MovementScript>().IncreaseSpeedUnLev());
         }
-        FindObjectOfType<AudioManager>().Play(5/*AudioManager.CurrentMusic*/);
+        FindObjectOfType<AudioManager>().Play(AudioManager.CurrentMusic);
         FindObjectOfType<PauseManager>().transform.Find("Pause").gameObject.SetActive(true);
         StartPanel.SetActive(false);
     }

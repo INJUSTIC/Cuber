@@ -49,7 +49,7 @@ public class AudioManager : MonoBehaviour
     }
     private void Update()
     {
-        /*if (SceneManager.GetActiveScene().name == "UnlimitedLevel" && MusicState && !_StartGame.IsFirst && !sounds[CurrentMusic].source.isPlaying && Time.timeScale != 0)
+        if (SceneManager.GetActiveScene().name == "UnlimitedLevel" && MusicState && !_StartGame.IsFirst && !sounds[CurrentMusic].source.isPlaying && Time.timeScale != 0)
         {
             int currentmusic = UnityEngine.Random.Range(0, sounds.Length - 1);
             while (currentmusic == CurrentMusic)
@@ -69,7 +69,7 @@ public class AudioManager : MonoBehaviour
             VolumeIsLawing = true;
             float Amount = sounds[CurrentMusic].volume / 40;
             StartCoroutine(LowMusic(Amount));
-        }*/
+        }
 
     }
     IEnumerator LowMusic(float Amount)

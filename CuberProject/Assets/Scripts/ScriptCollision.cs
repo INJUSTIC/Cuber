@@ -73,7 +73,7 @@ public class ScriptCollision : MonoBehaviour
             }
             //  }           
         }
-       /* if (!FinishGame.IsCompleted && !collision.collider.CompareTag("ground") && !IsOvered)
+        if (!FinishGame.IsCompleted && !collision.collider.CompareTag("ground") && !IsOvered)
         {
             IsOvered = true;
             PlayerColor.IsPartSystActive = false;
@@ -93,7 +93,7 @@ public class ScriptCollision : MonoBehaviour
             gameObject.SetActive(false);
             ContainerPartsofPlayer.SetActive(true);
             FindObjectOfType<Restart>().RestartGame();
-        }*/
+        }
     }
     /*private void OnCollisionStay(Collision collision)
     {
