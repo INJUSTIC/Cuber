@@ -24,7 +24,7 @@ public class CubeBuyingManager : MonoBehaviour
     public void OnYesClicked()
     {
         int Price = System.Convert.ToInt32(BuyingCube.transform.Find("PriceContainer").Find("Price").GetComponent<TextMeshProUGUI>().text);
-        float CurrentCoins = /*SaveSystem.LoadCoins()*/200;
+        float CurrentCoins = SaveSystem.LoadCoins();
         if (CurrentCoins >= Price)
         {
             SaveSystem.SaveCoins(-Price);
