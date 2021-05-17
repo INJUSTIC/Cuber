@@ -21,6 +21,7 @@ public class Menu : MonoBehaviour
     public GameObject CreditsPanel;
     public GameObject Cube;
     public RewardedAd rewarded;
+    //private PlayReviewInfo _playReviewInfo;
     public List<Button> listofbuttons = new List<Button>();
     public GameObject GetCoins;
     private bool GetCoinsClicked = false;
@@ -33,7 +34,6 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
-        _reviewManager = new ReviewManager();
         //Application.targetFrameRate = 60;
         if (PlayerPrefs.GetInt("FirstTimeEntered") != 1)
         {
@@ -97,7 +97,28 @@ public class Menu : MonoBehaviour
         rewarded.OnAdLoaded += OnAdLoaded;
         rewarded.LoadAd(new AdRequest.Builder().Build());
     }
+   /* IEnumerator RequestReviews()
+    {
+        // Request a ReviewInfo object
+        var requestFlowOperation = _reviewManager.RequestReviewFlow();
+        yield return requestFlowOperation;
+        if (requestFlowOperation.Error != ReviewErrorCode.NoError)
+        {
+            // Log error. For example, using requestFlowOperation.Error.ToString().
+            yield break;
+        }
+        _playReviewInfo = requestFlowOperation.GetResult();
 
+        //Launch the in-app review
+        var launchFlowOperation = _reviewManager.LaunchReviewFlow(_playReviewInfo);
+        yield return launchFlowOperation;
+        _playReviewInfo = null; // Reset the object
+        if (launchFlowOperation.Error != ReviewErrorCode.NoError)
+        {
+            // Log error. For example, using requestFlowOperation.Error.ToString().
+            yield break;
+        }
+    }*/
     public void OnNoClicked()
     {
         RateUsPanel.SetActive(false);
