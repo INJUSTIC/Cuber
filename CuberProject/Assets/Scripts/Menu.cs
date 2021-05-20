@@ -21,14 +21,14 @@ public class Menu : MonoBehaviour
     public GameObject CreditsPanel;
     public GameObject Cube;
     public RewardedAd rewarded;
-    //private PlayReviewInfo _playReviewInfo;
+    private PlayReviewInfo _playReviewInfo;
     public List<Button> listofbuttons = new List<Button>();
     public GameObject GetCoins;
     private bool GetCoinsClicked = false;
     // Create instance of ReviewManager
     private ReviewManager _reviewManager;
     [SerializeField]
-    private GameObject RateUsPanel;
+    //private GameObject RateUsPanel;
     public const string AdID = "ca-app-pub-7201061393448184/4359617145"/*"ca-app-pub-3940256099942544/5224354917"*/;
 
     private void Start()
@@ -37,25 +37,18 @@ public class Menu : MonoBehaviour
         //Application.targetFrameRate = 60;
         if (PlayerPrefs.GetInt("FirstTimeEntered") != 1)
         {
-            SaveSystem.SaveTimeIsFirstEntered(DateTime.UtcNow);
+            SaveSystem.SaveTimeAfterReviewInfo(DateTime.UtcNow);
             PlayerPrefs.SetInt("FirstTimeEntered", 1);
             // PlayerPrefs.DeleteAll();
         }
         else
         {
-            if (DateTime.UtcNow.Subtract(SaveSystem.LoadTimeIsFirstEntered()).TotalDays > 1 && PlayerPrefs.GetInt("RateUsNoOrYes") != 1)
+            if (DateTime.UtcNow.Subtract(SaveSystem.LoadTimeAfterReviewInfo()).TotalMinutes > 1)
             {
-                if (SaveSystem.LoadTimeIsClickedRateLater() != null)
-                {
-                    if (DateTime.UtcNow.Subtract((DateTime)SaveSystem.LoadTimeIsClickedRateLater()).TotalDays > 1)
-                    {
-                        RateUsPanel.SetActive(true);
-                    }
-                }
-                else
-                {
-                    RateUsPanel.SetActive(true);
-                }
+                UnityEngine.Debug.Log("WTF");
+                _reviewManager = new ReviewManager();
+                StartCoroutine(RequestReviews());
+                SaveSystem.SaveTimeAfterReviewInfo(DateTime.UtcNow);
             }
             // PlayerPrefs.DeleteAll();
         }
@@ -97,7 +90,7 @@ public class Menu : MonoBehaviour
         rewarded.OnAdLoaded += OnAdLoaded;
         rewarded.LoadAd(new AdRequest.Builder().Build());
     }
-   /* IEnumerator RequestReviews()
+    IEnumerator RequestReviews()
     {
         // Request a ReviewInfo object
         var requestFlowOperation = _reviewManager.RequestReviewFlow();
@@ -118,8 +111,8 @@ public class Menu : MonoBehaviour
             // Log error. For example, using requestFlowOperation.Error.ToString().
             yield break;
         }
-    }*/
-    public void OnNoClicked()
+    }
+    /*public void OnNoClicked()
     {
         RateUsPanel.SetActive(false);
         PlayerPrefs.SetInt("RateUsNoOrYes", 1);
@@ -134,7 +127,7 @@ public class Menu : MonoBehaviour
         Application.OpenURL("market://details?id = com.INJUSTIC_INC.Cu3ber");
         RateUsPanel.SetActive(false);
         PlayerPrefs.SetInt("RateUsNoOrYes", 1);
-    }
+    }*/
     public void OnGetCoinsClicked()
     {
         foreach (Button button in listofbuttons)

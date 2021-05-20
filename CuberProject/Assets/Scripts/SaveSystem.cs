@@ -686,9 +686,9 @@ public static class SaveSystem
             return null;
         }
     }
-    public static void SaveTimeIsFirstEntered(DateTime time)
+    public static void SaveTimeAfterReviewInfo(DateTime time)
     {
-        string path = Application.persistentDataPath + "/TimeIsFirstEntered.cub";
+        string path = Application.persistentDataPath + "/TimeAfterReviewInfo.cub";
         List<int> list = new List<int>
         {
             time.Year,
@@ -700,9 +700,9 @@ public static class SaveSystem
         };
         Save(path, list);
     }
-    public static DateTime LoadTimeIsFirstEntered()
+    public static DateTime LoadTimeAfterReviewInfo()
     {
-        string path = Application.persistentDataPath + "/TimeIsFirstEntered.cub";
+        string path = Application.persistentDataPath + "/TimeAfterReviewInfo.cub";
         try
         {
             List<int> list = Load<List<int>>(path);
@@ -714,42 +714,7 @@ public static class SaveSystem
         {
             return default;
         }
-    }
-    public static void SaveTimeIsClickedRateLater(DateTime time)
-    {
-        string path = Application.persistentDataPath + "/TimeIsClickedRateLater.cub";
-        List<int> list = new List<int>
-        {
-            time.Year,
-            time.Month,
-            time.Day,
-            time.Hour,
-            time.Minute,
-            time.Second
-        };
-        Save(path, list);
-    }
-    public static DateTime? LoadTimeIsClickedRateLater()
-    {
-        string path = Application.persistentDataPath + "/TimeIsClickedRateLater.cub";
-        try
-        {
-            if (File.Exists(path))
-            {
-                List<int> list = Load<List<int>>(path);
-                DateTime dateTime = new DateTime(list[0], list[1], list[2], list[3], list[4], list[5]);
-                return dateTime;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        catch
-        {
-            return null;
-        }
-    }
+    }    
     private class StringComparerAsInt : IComparer<string>
     {
         public int Compare(string FirstStr, string SecondStr)
