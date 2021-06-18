@@ -95,7 +95,7 @@ public class CubeRotation : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit raycastHit) || touch.phase != TouchPhase.Ended /*&& raycastHit.collider == gameObject*/)
+            if (Physics.Raycast(ray, out RaycastHit raycastHit)/* || touch.phase != TouchPhase.Ended*/ /*&& raycastHit.collider == gameObject*/)
             {
                 touch = Input.GetTouch(0);
                 XRotation = touch.deltaPosition.x * 0.03f;

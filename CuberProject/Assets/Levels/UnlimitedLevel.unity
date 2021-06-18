@@ -3566,6 +3566,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4386812020686110683, guid: 477ab29b458380542b57bf659f97167e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4505975701531313952, guid: 477ab29b458380542b57bf659f97167e,
         type: 3}
       propertyPath: m_CullTransparentMesh
@@ -4620,7 +4625,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.5e-44}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 1.6114932e-38, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -5728,7 +5733,7 @@ PrefabInstance:
     - target: {fileID: 4585613994840724720, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4585613994840724720, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
@@ -5860,7 +5865,7 @@ PrefabInstance:
     - target: {fileID: 5325845345119704355, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5325845345119704355, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}

@@ -3373,6 +3373,11 @@ PrefabInstance:
       objectReference: {fileID: 134750028}
     - target: {fileID: 2813266646176913860, guid: 0d6334d92f6a28743a53a8a248e62730,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813266646176913860, guid: 0d6334d92f6a28743a53a8a248e62730,
+        type: 3}
       propertyPath: ContainerPartsofPlayer
       value: 
       objectReference: {fileID: 1830417914}
