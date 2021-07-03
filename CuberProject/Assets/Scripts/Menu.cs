@@ -11,6 +11,11 @@ using Google.Play.Review;
 
 public class Menu : MonoBehaviour
 {
+   /* public GameObject LoadingBar;
+    public GameObject Cubee;
+    public Image LoadingLineRed;*/
+
+
     public GameObject MainMenuPanel;
     public GameObject SettingsPanel;
     public GameObject ChooseModePanel;
@@ -33,6 +38,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
+      //  StartCoroutine(LoadingAnim());
         Time.timeScale = 1;
         StartCoroutine(RequestReviews());
         if (PlayerPrefs.GetInt("FirstTimeEntered") != 1)
@@ -339,7 +345,6 @@ public class Menu : MonoBehaviour
             button.interactable = true;
         }
     }
-
     private void OnApplicationQuit()
     {
         Caching.ClearCache();
