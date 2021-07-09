@@ -2132,7 +2132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: send feedback
+  m_text: "\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u043E\u0442\u0437\u044B\u0432"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4462739912eb87047927b268be2bc315, type: 2}
   m_sharedMaterial: {fileID: 3189912621646904140, guid: 4462739912eb87047927b268be2bc315,
@@ -32414,7 +32414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'DESIGN BY: '
+  m_text: "\u0414\u0418\u0417\u0410\u0419\u041D:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4462739912eb87047927b268be2bc315, type: 2}
   m_sharedMaterial: {fileID: 3189912621646904140, guid: 4462739912eb87047927b268be2bc315,
@@ -35178,7 +35178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'GAME BY: '
+  m_text: "\u0418\u0413\u0420\u0410:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4462739912eb87047927b268be2bc315, type: 2}
   m_sharedMaterial: {fileID: 3189912621646904140, guid: 4462739912eb87047927b268be2bc315,
@@ -41240,11 +41240,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CREDITS
+  m_text: "\u041F\u0420\u0418\u0417\u041D\u0410\u0422\u0415\u041B\u042C\u041D\u041E\u0421\u0422\u042C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 3189912621646904140, guid: dbe1e0c05ab717744be09a3ed4ed64b9,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -41268,8 +41267,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -41284,7 +41283,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -56385,7 +56384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1821870095
 RectTransform:
   m_ObjectHideFlags: 0
@@ -67145,7 +67144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'MUSIC BY:'
+  m_text: "\u041C\u0423\u0417\u042B\u041A\u0410:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4462739912eb87047927b268be2bc315, type: 2}
   m_sharedMaterial: {fileID: 3189912621646904140, guid: 4462739912eb87047927b268be2bc315,
@@ -67692,7 +67691,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 56504979}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -68371,7 +68370,7 @@ PrefabInstance:
     - target: {fileID: 6386309349755803589, guid: f365bd7539ec7604cb157fa0269a4de8,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6386309349755803591, guid: f365bd7539ec7604cb157fa0269a4de8,
         type: 3}

@@ -10,10 +10,12 @@ public class CoinCollision : MonoBehaviour
     public GameObject CoinImage;
     public TextMeshProUGUI CoinNumber;
     public static int Counter = 0;
+    AudioSource Audio;
     private void Start()
     {
         Counter = 0;
         GetComponent<AudioSource>().volume = 1f;
+        Audio = GetComponent<AudioSource>();
     }
     public void OnTriggerEnter(Collider other)
     {
@@ -22,7 +24,7 @@ public class CoinCollision : MonoBehaviour
             Destroy(other.gameObject);
             if (AudioManager.EffectsState)
             {
-                GetComponent<AudioSource>().Play();
+                Audio.Play();
             }
             Counter++;
             CoinText.text = Counter.ToString();

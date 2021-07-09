@@ -68,6 +68,7 @@ MonoBehaviour:
   m_SourceFontFile: {fileID: 0}
   m_AtlasPopulationMode: 0
   m_FaceInfo:
+    m_FaceIndex: 0
     m_FamilyName: Futura
     m_StyleName: Medium
     m_PointSize: 70
@@ -1821,6 +1822,7 @@ MonoBehaviour:
   - {fileID: -7047985166742478239}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
+  m_ClearDynamicDataOnBuild: 0
   m_UsedGlyphRects:
   - m_X: 0
     m_Y: 0

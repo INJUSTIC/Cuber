@@ -41,12 +41,20 @@ public class Restart : MonoBehaviour
     private Thread ThreadForInternetConnection;
     public TextMeshProUGUI Attempt;
     public GameObject FirstPart;
+    private Animation DeathAnim;
+    private AnimatingButtons forAdAnimatingButton;
+    private AnimatingButtons forCoinsAnimatingButton;
+    private BackRestartPressed backRestartPressed;
     // private static bool IsFirstTimeAddShow = true;
     //private const string GameID = "ca-app-pub-7201061393448184~3407023356";
     private const string rewardedAdID = "ca-app-pub-7201061393448184/4508352034" /*"ca-app-pub-3940256099942544/5224354917"*/;
 
     private void Start()
     {
+        forAdAnimatingButton = SaveMeForAdButton.GetComponent<AnimatingButtons>();
+        forCoinsAnimatingButton = SaveMeForCoinsButton.GetComponent<AnimatingButtons>();
+        backRestartPressed = BackButton.gameObject.GetComponent<BackRestartPressed>();
+        DeathAnim = GetComponent<Animation>();
         ThreadForInternetConnection = new Thread(new ThreadStart(() =>
         {
             WebClient Client = new WebClient();
@@ -408,20 +416,20 @@ public class Restart : MonoBehaviour
             SaveMeForAdButton.GetComponent<SaveMeButtonPressed>().IsSaveMeButtonUp = false;
             TimeAfterSaveMeClicked.Stop();
         }*/
-        if (RestartPanel.activeSelf && Input.touchCount > 0 && !Advertisement.isShowing && !GetComponent<Animation>().IsPlaying("DeathAnim"))
+        if (RestartPanel.activeSelf && Input.touchCount > 0 && !Advertisement.isShowing && !DeathAnim.IsPlaying("DeathAnim"))
         {
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
                 IsTouchingWasBegan = true;
             }
-            if (touch.phase == TouchPhase.Ended && IsTouchingWasBegan && !BackButton.gameObject.GetComponent<BackRestartPressed>().IsBackPressed)
+            if (touch.phase == TouchPhase.Ended && IsTouchingWasBegan && !backRestartPressed.IsBackPressed)
             {
                 if (SceneManager.GetActiveScene().name != "UnlimitedLevel")
                 {
                     ClickRestart();
                 }
-                else if ((!SaveMeForAdButton.GetComponent<AnimatingButtons>().IsButtonUp && !SaveMeForCoinsButton.GetComponent<AnimatingButtons>().IsButtonUp) || !IsFirstTimeContinuePlaying)
+                else if ((!forAdAnimatingButton.IsButtonUp && !forCoinsAnimatingButton.IsButtonUp) || !IsFirstTimeContinuePlaying)
                 {
                     ClickRestart();
                 }
