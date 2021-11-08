@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 public class Score : MonoBehaviour
 {
     public Transform Player;
+    private TextMeshProUGUI text;
+    private void Start()
+    {
+        text = GetComponent<TextMeshProUGUI>();
+    }
     private void Update()
     {
-        GetComponent<TextMeshProUGUI>().text = ((Player.position.z) / 5).ToString("0");
+        text.text = ((Player.position.z) / 5).ToString("0");
         // For Achievement 1
         /* if (SceneManager.GetActiveScene().name == "UnlimitedLevel")
          {

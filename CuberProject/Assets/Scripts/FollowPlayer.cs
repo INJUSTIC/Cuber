@@ -23,7 +23,7 @@ public class FollowPlayer : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, Player.position.z);
         }
-        if (transform.tag == "MainCamera" && !FindObjectOfType<SceneLoader>().LoadingPanel.activeSelf)
+        if (transform.tag == "MainCamera" && !FindObjectOfType<SceneLoader>().BackGrPanel.activeSelf)
         {
             /*if (Input.GetKey(KeyCode.A))
             {

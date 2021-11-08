@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1089811574806",
+    "firebase_url": "https://injust1c-firebase-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "injust1c-firebase",
+    "storage_bucket": "injust1c-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089811574806:android:e3839bb2bacdf3411f0537",
+        "android_client_info": {
+          "package_name": "com.INJUSTIC_INC.Cuber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089811574806-4a2pq3vpj6q2p9sepu6pb21r8g9g8f9v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.INJUSTIC_INC.Cuber",
+            "certificate_hash": "aad86a24ffb4db4dd64437e51950c701534b5743"
+          }
+        },
+        {
+          "client_id": "1089811574806-mplbh1dvov5n8jap1j4ob2491856gb3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp8RbQv1_zekWvV3bL_yQ_XmG9rqtwwxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089811574806-mplbh1dvov5n8jap1j4ob2491856gb3q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
