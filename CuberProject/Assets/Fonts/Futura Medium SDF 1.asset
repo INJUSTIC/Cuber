@@ -68,6 +68,7 @@ MonoBehaviour:
   m_SourceFontFile: {fileID: 0}
   m_AtlasPopulationMode: 0
   m_FaceInfo:
+    m_FaceIndex: 0
     m_FamilyName: Futura
     m_StyleName: Medium
     m_PointSize: 70
@@ -1821,6 +1822,7 @@ MonoBehaviour:
   - {fileID: -7047985166742478239}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
+  m_ClearDynamicDataOnBuild: 0
   m_UsedGlyphRects:
   - m_X: 0
     m_Y: 0
@@ -2484,7 +2486,10 @@ MonoBehaviour:
   m_FontFeatureTable:
     m_GlyphPairAdjustmentRecords: []
   fallbackFontAssets: []
-  m_FallbackFontAssetTable: []
+  m_FallbackFontAssetTable:
+  - {fileID: 11400000, guid: 50036b054fe5df74fa82fb0ae99990da, type: 2}
+  - {fileID: 11400000, guid: 4d3dcc987669d2e41a0adfd6985226ce, type: 2}
+  - {fileID: 11400000, guid: f75dcd853c0f86748a5d0b3e4177b171, type: 2}
   m_CreationSettings:
     sourceFontFileName: 
     sourceFontFileGUID: 95379c451bb63c448870efc1752b2898

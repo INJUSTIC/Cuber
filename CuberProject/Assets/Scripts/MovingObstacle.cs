@@ -32,7 +32,8 @@ public class MovingObstacle : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, Targets[current].transform.position) < Radius)
+        Vector3 offset = transform.position - Targets[current].transform.position;
+        if (offset.sqrMagnitude < Radius*Radius)
         {
             ++current;
             if (current == Targets.Length)

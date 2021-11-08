@@ -27,7 +27,8 @@ public class LineMoving : MonoBehaviour
             //{      
             //Debug.Log(Speed);
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, -1.81f, transform.position.z), Speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position/*.y + 2.3f <= 0.5f*/, new Vector3(transform.position.x, -2.3f, transform.position.z)) <= 0.5f)
+            Vector3 offset = transform.position - new Vector3(transform.position.x, -2.3f, transform.position.z);
+            if (offset.sqrMagnitude <= 0.25f)
             {
                 transform.position = new Vector3(transform.position.x, 49f, transform.position.z);
             }
