@@ -3,28 +3,26 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Settings : MonoBehaviour
 {
-    public Slider slider;
-    public static float volume;
-    public Button MusicIconButton;
+    /*public Button MusicIconButton;
     public Button EffectsIconButton;
     public Sprite MusicIcon;
     public Sprite MusicIconCrossedOut;
     public Sprite EffectsIcon;
     public Sprite EffectsIconCrossedOut;
-    public Sprite MusicIconForBlackBack;
-    public Sprite MusicIconForBlackBackCrossedOut;
-    public Sprite EffectsIconForBlackBack;
-    public Sprite EffectsIconForBlackBackCrossedOut;
-    public void ChangeVolume(float Volume)
+     public Sprite MusicIconForBlackBack;
+     public Sprite MusicIconForBlackBackCrossedOut;
+     public Sprite EffectsIconForBlackBack;
+     public Sprite EffectsIconForBlackBackCrossedOut;*/
+    /*public void ChangeVolume(float Volume)
     {
         volume = Volume;
         SaveSystem.SaveVolume(volume);
-    }
-    private void Start()
+    }*/
+    /*private void Start()
     {
         AudioManager.MusicState = SaveSystem.LoadMusicToggle();
         AudioManager.EffectsState = SaveSystem.LoadEffectsToggle();
-        volume = SaveSystem.LoadVolume();
+        // volume = SaveSystem.LoadVolume();
         if (AudioManager.MusicState)
         {
             MusicIconButton.image.sprite = MusicIcon;
@@ -41,39 +39,21 @@ public class Settings : MonoBehaviour
         {
             EffectsIconButton.image.sprite = EffectsIconCrossedOut;
         }
-        slider.value = volume;
+        //slider.value = volume;
     }
     public void OnMusicButtonClicked()
     {
-        if (Camera.main.backgroundColor == new Color(0, 0, 0))
+        if (MusicIconButton.image.sprite == MusicIcon)
         {
-            if (MusicIconButton.image.sprite == MusicIcon)
-            {
-                AudioManager.MusicState = false;
-                SaveSystem.SaveMusicToggle(false);
-                MusicIconButton.image.sprite = MusicIconForBlackBackCrossedOut;
-            }
-            else
-            {
-                AudioManager.MusicState = true;
-                SaveSystem.SaveMusicToggle(true);
-                MusicIconButton.image.sprite = MusicIconForBlackBack;
-            }
+            AudioManager.MusicState = false;
+            SaveSystem.SaveMusicToggle(false);
+            MusicIconButton.image.sprite = MusicIconCrossedOut;
         }
         else
         {
-            if (MusicIconButton.image.sprite == MusicIcon)
-            {
-                AudioManager.MusicState = false;
-                SaveSystem.SaveMusicToggle(false);
-                MusicIconButton.image.sprite = MusicIconCrossedOut;
-            }
-            else
-            {
-                AudioManager.MusicState = true;
-                SaveSystem.SaveMusicToggle(true);
-                MusicIconButton.image.sprite = MusicIcon;
-            }
+            AudioManager.MusicState = true;
+            SaveSystem.SaveMusicToggle(true);
+            MusicIconButton.image.sprite = MusicIcon;
         }
         if (SceneManager.GetActiveScene().name == "Main Menu")
         {
@@ -93,35 +73,21 @@ public class Settings : MonoBehaviour
     }
     public void OnEffectsButtonClicked()
     {
-        if (Camera.main.backgroundColor == new Color(0, 0, 0))
+        if (EffectsIconButton.image.sprite == EffectsIcon)
         {
-            if (MusicIconButton.image.sprite == MusicIcon)
-            {
-                AudioManager.EffectsState = false;
-                SaveSystem.SaveEffectsToggle(false);
-                EffectsIconButton.image.sprite = EffectsIconForBlackBackCrossedOut;
-            }
-            else
-            {
-                AudioManager.EffectsState = true;
-                SaveSystem.SaveEffectsToggle(true);
-                EffectsIconButton.image.sprite = EffectsIconForBlackBack;
-            }
+            AudioManager.EffectsState = false;
+            SaveSystem.SaveEffectsToggle(false);
+            EffectsIconButton.image.sprite = EffectsIconCrossedOut;
         }
         else
         {
-            if (EffectsIconButton.image.sprite == EffectsIcon)
-            {
-                AudioManager.EffectsState = false;
-                SaveSystem.SaveEffectsToggle(false);
-                EffectsIconButton.image.sprite = EffectsIconCrossedOut;
-            }
-            else
-            {
-                AudioManager.EffectsState = true;
-                SaveSystem.SaveEffectsToggle(true);
-                EffectsIconButton.image.sprite = EffectsIcon;
-            }
+            AudioManager.EffectsState = true;
+            SaveSystem.SaveEffectsToggle(true);
+            EffectsIconButton.image.sprite = EffectsIcon;
         }
+    }*/
+    public void OnLanguageClicked(Button button)
+    {
+        button.transform.localScale = new Vector2(2.623f, 2.623f);
     }
 }

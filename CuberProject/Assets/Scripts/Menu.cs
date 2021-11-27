@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Firebase;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,11 @@ using Google.Play.Review;
 
 public class Menu : MonoBehaviour
 {
+   /* public GameObject LoadingBar;
+    public GameObject Cubee;
+    public Image LoadingLineRed;*/
+
+
     public GameObject MainMenuPanel;
     public GameObject SettingsPanel;
     public GameObject ChooseModePanel;
@@ -18,8 +24,17 @@ public class Menu : MonoBehaviour
     public GameObject ShopPanel;
     public GameObject AchievmentsPanel;
     public GameObject CreditsPanel;
+   /* public Button EngLang;
+    public Button RuLang;
+    public Button FraLang;
+    public Button EspLang;
+    public Button ArabLang;
+    public Button ItaLang;
+    public Button GerLang;
+    public Button ChiLang;*/
     public GameObject Cube;
     public RewardedAd rewarded;
+    private PlayReviewInfo _playReviewInfo;
     public List<Button> listofbuttons = new List<Button>();
     public GameObject GetCoins;
     private bool GetCoinsClicked = false;
@@ -31,9 +46,9 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
+      //  StartCoroutine(LoadingAnim());
         Time.timeScale = 1;
-        _reviewManager = new ReviewManager();
-        //Application.targetFrameRate = 60;
+        StartCoroutine(RequestReviews());
         if (PlayerPrefs.GetInt("FirstTimeEntered") != 1)
         {
             SaveSystem.SaveTimeIsFirstEntered(DateTime.UtcNow);
@@ -96,7 +111,29 @@ public class Menu : MonoBehaviour
         rewarded.OnAdLoaded += OnAdLoaded;
         rewarded.LoadAd(new AdRequest.Builder().Build());
     }
+    IEnumerator RequestReviews()
+    {
+        // Request a ReviewInfo object
+        _reviewManager = new ReviewManager();
+        var requestFlowOperation = _reviewManager.RequestReviewFlow();
+        yield return requestFlowOperation;
+        if (requestFlowOperation.Error != ReviewErrorCode.NoError)
+        {
+            // Log error. For example, using requestFlowOperation.Error.ToString().
+            yield break;
+        }
+        _playReviewInfo = requestFlowOperation.GetResult();
 
+        //Launch the in-app review
+        var launchFlowOperation = _reviewManager.LaunchReviewFlow(_playReviewInfo);
+        yield return launchFlowOperation;
+        _playReviewInfo = null; // Reset the object
+        if (launchFlowOperation.Error != ReviewErrorCode.NoError)
+        {
+            // Log error. For example, using requestFlowOperation.Error.ToString().
+            yield break;
+        }
+    }
     public void OnNoClicked()
     {
         RateUsPanel.SetActive(false);
@@ -119,8 +156,8 @@ public class Menu : MonoBehaviour
         {
             button.interactable = false;
         }
-        GetCoins.transform.GetChild(1).gameObject.SetActive(false);
-        GetCoins.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "ad is loading...";
+       // GetCoins.SetActive(false);
+       // GetCoins.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "ad is loading...";
         StartCoroutine(WaitForAdMob());
         GetCoinsClicked = true;
         if (rewarded.IsLoaded())
@@ -160,10 +197,10 @@ public class Menu : MonoBehaviour
         {
             button.interactable = true;
         }
-        GetCoins.transform.GetChild(1).gameObject.SetActive(true);
-        GetCoins.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "get 10";
-        GetCoins.transform.localScale = new Vector3(1.25f, 2.28f, 1.24f);
-        GetCoins.GetComponent<Animator>().enabled = true;
+       // GetCoins.SetActive(true);
+       // GetCoins.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "get 10";
+        //GetCoins.transform.localScale = new Vector3(1.25f, 2.28f, 1.24f);
+       // GetCoins.GetComponent<Animator>().enabled = true;
         GetCoinsClicked = false;
         LoadAd();
     }
@@ -174,10 +211,10 @@ public class Menu : MonoBehaviour
         {
             button.interactable = true;
         }
-        GetCoins.transform.GetChild(1).gameObject.SetActive(true);
-        GetCoins.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "get 10";
-        GetCoins.transform.localScale = new Vector3(1.25f, 2.28f, 1.24f);
-        GetCoins.GetComponent<Animator>().enabled = true;
+        //GetCoins.SetActive(true);
+       // GetCoins.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "get 10";
+        //GetCoins.transform.localScale = new Vector3(1.25f, 2.28f, 1.24f);
+        //GetCoins.GetComponent<Animator>().enabled = true;
         GetCoinsClicked = false;
         LoadAd();
     }
@@ -188,10 +225,10 @@ public class Menu : MonoBehaviour
         {
             button.interactable = true;
         }
-        GetCoins.transform.GetChild(1).gameObject.SetActive(true);
-        GetCoins.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "get 10";
-        GetCoins.transform.localScale = new Vector3(1.25f, 2.28f, 1.24f);
-        GetCoins.GetComponent<Animator>().enabled = true;
+        //GetCoins.SetActive(true);
+      //  GetCoins.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "get 10";
+        //GetCoins.transform.localScale = new Vector3(1.25f, 2.28f, 1.24f);
+       // GetCoins.GetComponent<Animator>().enabled = true;
         GetCoinsClicked = false;
         LoadAd();
     }
@@ -307,18 +344,54 @@ public class Menu : MonoBehaviour
         yield return new WaitForSeconds(7);
         GetCoinsClicked = false;
         LoadAd();
-        GetCoins.transform.GetChild(1).gameObject.SetActive(true);
-        GetCoins.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "get 10";
-        GetCoins.transform.localScale = new Vector3(1.25f, 2.28f, 1.24f);
-        GetCoins.GetComponent<Animator>().enabled = true;
+       // GetCoins.transform.GetChild(1).gameObject.SetActive(true);
+       // GetCoins.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "get 10";
+       // GetCoins.transform.localScale = new Vector3(1.25f, 2.28f, 1.24f);
+        //GetCoins.GetComponent<Animator>().enabled = true;
         foreach (Button button in listofbuttons)
         {
             button.interactable = true;
         }
     }
-
     private void OnApplicationQuit()
     {
         Caching.ClearCache();
-    }
+    }  
+        /*switch(button.name)
+        {
+            case "ENG_Button":
+                {
+
+                    break;
+                }
+            case "RU_Button":
+                {
+                    break;
+                }
+            case "GER_Button":
+                {
+                    break;
+                }
+            case "Spain_Button":
+                {
+                    break;
+                }
+            case "ITA_Button":
+                {
+                    break;
+                }
+            case "FRA_Button":
+                {
+                    break;
+                }
+            case "China_Button":
+                {
+                    break;
+                }
+            case "Arab_Button":
+                {
+                    break;
+                }
+
+        }*/
 }

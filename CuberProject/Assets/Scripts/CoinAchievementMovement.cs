@@ -22,7 +22,8 @@ public class CoinAchievementMovement : MonoBehaviour
     void Update()
     {
         CoinImage.SetActive(true);
-        if (Vector2.Distance(transform.position, Targets[1].transform.position) < Radius)
+        Vector2 offset = transform.position - Targets[1].transform.position;
+        if (offset.sqrMagnitude < Radius * Radius)
         {
             if (gameObject.name == "Coin (9)" && !WaitAfterLastCoin.IsRunning)
             {

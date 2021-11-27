@@ -2,6 +2,7 @@
   "project_info": {
     "project_number": "1089811574806",
     "project_id": "injust1c-firebase",
+    "firebase_url": "https://injust1c-firebase-default-rtdb.europe-west1.firebasedatabase.app/",
     "storage_bucket": "injust1c-firebase.appspot.com"
   },
   "client": [

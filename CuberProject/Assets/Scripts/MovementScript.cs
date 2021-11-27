@@ -69,16 +69,23 @@ public class MovementScript : MonoBehaviour
                 rd.AddForce(SidewaySpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
                 //transform.position += new Vector3(SidewaySpeed * Time.deltaTime, 0, 0);
             }
-            if (Input.touchCount > 0)
+            if(PlayerPrefs.GetInt("Accelerator") != 1)
             {
-                Touch touch = Input.GetTouch(0);
-                if (touch.position.x > ScreenWidth / 2)
+                rd.AddForce(SidewaySpeed * Input.acceleration.x * 4 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            }
+            else
+            {
+                if (Input.touchCount > 0)
                 {
-                    rd.AddForce(SidewaySpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-                }
-                else
-                {
-                    rd.AddForce(-SidewaySpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+                    Touch touch = Input.GetTouch(0);
+                    if (touch.position.x > ScreenWidth / 2)
+                    {
+                        rd.AddForce(SidewaySpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+                    }
+                    else
+                    {
+                        rd.AddForce(-SidewaySpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+                    }
                 }
             }
             transform.position += new Vector3(0, 0, ForwardSpeed * Time.deltaTime);

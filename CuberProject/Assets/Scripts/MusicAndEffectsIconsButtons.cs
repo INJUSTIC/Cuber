@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+// тут закомментирован код для цвета кнопок в зависимости от бэкграунда
 public class MusicAndEffectsIconsButtons : MonoBehaviour
 {
     public Button MusicIconButton;
@@ -12,19 +13,19 @@ public class MusicAndEffectsIconsButtons : MonoBehaviour
     public Sprite MusicIconCrossedOut;
     public Sprite EffectsIcon;
     public Sprite EffectsIconCrossedOut;
-    public Sprite WhiteMusicIcon;
-    public Sprite WhiteMusicIconCrossedOut;
-    public Sprite WhiteEffectsIcon;
-    public Sprite WhiteEffectsIconCrossedOut;
-    private Color LandColor;
+    //public Sprite WhiteMusicIcon;
+    //public Sprite WhiteMusicIconCrossedOut;
+    //public Sprite WhiteEffectsIcon;
+    //public Sprite WhiteEffectsIconCrossedOut;
+    //private Color LandColor;
     void Start()
     {
-        ColorData cl = SaveSystem.LoadColorofLand();
-        LandColor = new Color32(cl.Color[0], cl.Color[1], cl.Color[2], 255);
+        //ColorData cl = SaveSystem.LoadColorofLand();
+        //LandColor = new Color32(cl.Color[0], cl.Color[1], cl.Color[2], 255);
         AudioManager.MusicState = SaveSystem.LoadMusicToggle();
         AudioManager.EffectsState = SaveSystem.LoadEffectsToggle();
-        if (SceneManager.GetActiveScene().name == "Main Menu")
-        {
+       // if (SceneManager.GetActiveScene().name == "Main Menu")
+       //{
             if (AudioManager.EffectsState)
             {
                 EffectsIconButton.image.sprite = EffectsIcon;
@@ -41,8 +42,8 @@ public class MusicAndEffectsIconsButtons : MonoBehaviour
             {
                 MusicIconButton.image.sprite = MusicIconCrossedOut;
             }
-        }
-        else
+        //}
+        /*else
         {
             if (LandColor == Color.black)
             {
@@ -82,12 +83,12 @@ public class MusicAndEffectsIconsButtons : MonoBehaviour
                     EffectsIconButton.image.sprite = EffectsIconCrossedOut;
                 }
             }
-        }
+        }*/
     }
     public void OnMusicButtonClicked()
     {
-        if (SceneManager.GetActiveScene().name == "Main Menu")
-        {
+       // if (SceneManager.GetActiveScene().name == "Main Menu")
+        //{
             if (MusicIconButton.image.sprite == MusicIcon)
             {
                 AudioManager.MusicState = false;
@@ -108,8 +109,8 @@ public class MusicAndEffectsIconsButtons : MonoBehaviour
                     sound.source.volume = 1;
                 }
             }
-        }
-        else
+       // }
+        /*else
         {
             if (LandColor == Color.black)
             {
@@ -157,8 +158,8 @@ public class MusicAndEffectsIconsButtons : MonoBehaviour
                     }
                 }
             }
-        }
-        /*if (SceneManager.GetActiveScene().name == "Main Menu")
+        }*/
+        if (SceneManager.GetActiveScene().name == "Main Menu")
         {
             if (!AudioManager.MusicState) FindObjectOfType<AudioManager>().Stop("Theme");
             else FindObjectOfType<AudioManager>().Play("Theme");
@@ -172,12 +173,12 @@ public class MusicAndEffectsIconsButtons : MonoBehaviour
         {
             if (!AudioManager.MusicState) FindObjectOfType<AudioManager>().Stop("MusicForLevels");
             else FindObjectOfType<AudioManager>().Play("MusicForLevels");
-        }*/
+        }
     }
     public void OnEffectsButtonClicked()
     {
-        if (SceneManager.GetActiveScene().name == "Main Menu")
-        {
+        //if (SceneManager.GetActiveScene().name == "Main Menu")
+        //{
             if (EffectsIconButton.image.sprite == EffectsIcon)
             {
                 AudioManager.EffectsState = false;
@@ -190,8 +191,8 @@ public class MusicAndEffectsIconsButtons : MonoBehaviour
                 SaveSystem.SaveEffectsToggle(true);
                 EffectsIconButton.image.sprite = EffectsIcon;
             }
-        }
-        else
+        //}
+        /*else
         {
             if (LandColor == Color.black)
             {
@@ -223,6 +224,6 @@ public class MusicAndEffectsIconsButtons : MonoBehaviour
                     EffectsIconButton.image.sprite = EffectsIcon;
                 }
             }
-        }
+        }*/
     }
 }

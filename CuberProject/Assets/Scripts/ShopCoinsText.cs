@@ -3,12 +3,14 @@ using UnityEngine.UI;
 using TMPro;
 public class ShopCoinsText : MonoBehaviour
 {
+    private TextMeshProUGUI Text;
     void Start()
     {
-        GetComponent<TextMeshProUGUI>().text = SaveSystem.LoadCoins().ToString("0");
+        Text = GetComponent<TextMeshProUGUI>();
+        Text.text = SaveSystem.LoadCoins().ToString("0");
     }
     void Update()
     {
-        GetComponent<TextMeshProUGUI>().text = SaveSystem.LoadCoins().ToString("0");
+        Text.text = SaveSystem.LoadCoins().ToString("0");
     }
 }

@@ -313,6 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1136,6 +1137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1230,6 +1232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1613,6 +1616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1856,6 +1860,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8158593897391122868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1886,8 +1891,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 8158593897086111553}
-  MusicToggle: {fileID: 8158593897247256629}
-  EffectsToggle: {fileID: 8158593896002115707}
+  MusicIconButton: {fileID: 0}
+  EffectsIconButton: {fileID: 0}
+  MusicIcon: {fileID: 0}
+  MusicIconCrossedOut: {fileID: 0}
+  EffectsIcon: {fileID: 0}
+  EffectsIconCrossedOut: {fileID: 0}
+  MusicIconForBlackBack: {fileID: 0}
+  MusicIconForBlackBackCrossedOut: {fileID: 0}
+  EffectsIconForBlackBack: {fileID: 0}
+  EffectsIconForBlackBackCrossedOut: {fileID: 0}
 --- !u!1 &8158593897576665728
 GameObject:
   m_ObjectHideFlags: 0
