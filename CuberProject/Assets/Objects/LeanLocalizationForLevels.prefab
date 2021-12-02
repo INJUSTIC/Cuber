@@ -69,6 +69,9 @@ MonoBehaviour:
   - Language: Spanish
     Text: Siguiente nivel
     Object: {fileID: 0}
+  - Language: English
+    Text: Next Level
+    Object: {fileID: 0}
 --- !u!1 &3396651364793020797
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,9 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLanguage: English
+  currentLanguage: Russian
   detectLanguage: 1
-  defaultLanguage: 
+  defaultLanguage: English
   saveLoad: 1
   prefabs:
   - Root: {fileID: 765358623864573794, guid: 72791d95cee660147917361f531f775b, type: 3}
@@ -151,6 +154,9 @@ MonoBehaviour:
   - Root: {fileID: 765358623864573794, guid: d723c6557bd6de145a2fad37a6fe8229, type: 3}
     sources:
     - {fileID: -4933353152916006438, guid: d723c6557bd6de145a2fad37a6fe8229, type: 3}
+  - Root: {fileID: 765358623864573794, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
+    sources:
+    - {fileID: -4933353152916006438, guid: 971ef8207f535194faf411d40b27fb77, type: 3}
 --- !u!1 &3396651365081619406
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +215,7 @@ MonoBehaviour:
     Text: klick um zu starten
     Object: {fileID: 0}
   - Language: Italian
-    Text: clicca per iniziare
+    Text: premi per iniziare
     Object: {fileID: 0}
   - Language: Portuguese
     Text: "clique para come\xE7ar"
@@ -219,6 +225,9 @@ MonoBehaviour:
     Object: {fileID: 0}
   - Language: Spanish
     Text: haga clic para comenzar
+    Object: {fileID: 0}
+  - Language: English
+    Text: press to start
     Object: {fileID: 0}
 --- !u!1 &3396651365421436603
 GameObject:
@@ -289,6 +298,9 @@ MonoBehaviour:
   - Language: Spanish
     Text: Intento
     Object: {fileID: 0}
+  - Language: English
+    Text: Attempt
+    Object: {fileID: 0}
 --- !u!1 &3396651366048492284
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +370,9 @@ MonoBehaviour:
   - Language: Spanish
     Text: Nivel
     Object: {fileID: 0}
+  - Language: English
+    Text: Level
+    Object: {fileID: 0}
 --- !u!1 &3396651366109569678
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +428,7 @@ MonoBehaviour:
     Text: "JEU TERMIN\xC9"
     Object: {fileID: 0}
   - Language: German
-    Text: DAS SPIEL IST BEENDET
+    Text: SPIEL IST AUS
     Object: {fileID: 0}
   - Language: Italian
     Text: GAME OVER
@@ -426,6 +441,9 @@ MonoBehaviour:
     Object: {fileID: 0}
   - Language: Spanish
     Text: JUEGO TERMINADO
+    Object: {fileID: 0}
+  - Language: English
+    Text: GAME OVER
     Object: {fileID: 0}
 --- !u!1 &3396651366122647283
 GameObject:
@@ -496,6 +514,9 @@ MonoBehaviour:
   - Language: Spanish
     Text: 'Tu recompensa:'
     Object: {fileID: 0}
+  - Language: English
+    Text: 'Your reward:'
+    Object: {fileID: 0}
 --- !u!1 &3396651366211447861
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +585,9 @@ MonoBehaviour:
     Object: {fileID: 0}
   - Language: Spanish
     Text: "Men\xFA principal"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Main Menu
     Object: {fileID: 0}
 --- !u!1 &3396651366234886840
 GameObject:
@@ -634,6 +658,9 @@ MonoBehaviour:
   - Language: Spanish
     Text: haga clic para reiniciar
     Object: {fileID: 0}
+  - Language: English
+    Text: press to restart
+    Object: {fileID: 0}
 --- !u!1 &3396651366505494333
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,6 +730,9 @@ MonoBehaviour:
   - Language: Spanish
     Text: Continuar
     Object: {fileID: 0}
+  - Language: English
+    Text: Resume
+    Object: {fileID: 0}
 --- !u!1 &3396651366744297664
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,4 +801,7 @@ MonoBehaviour:
     Object: {fileID: 0}
   - Language: Spanish
     Text: Aprobado
+    Object: {fileID: 0}
+  - Language: English
+    Text: Complete
     Object: {fileID: 0}

@@ -164,7 +164,7 @@ public class MusicAndEffectsIconsButtons : MonoBehaviour
             if (!AudioManager.MusicState) FindObjectOfType<AudioManager>().Stop("Theme");
             else FindObjectOfType<AudioManager>().Play("Theme");
         }
-        else if (SceneManager.GetActiveScene().name == "UnlimitedLevel")
+        /*else if (SceneManager.GetActiveScene().name == "UnlimitedLevel")
         {
             if (!AudioManager.MusicState) FindObjectOfType<AudioManager>().Stop(AudioManager.CurrentMusic);
             else FindObjectOfType<AudioManager>().Play(AudioManager.CurrentMusic);
@@ -173,7 +173,7 @@ public class MusicAndEffectsIconsButtons : MonoBehaviour
         {
             if (!AudioManager.MusicState) FindObjectOfType<AudioManager>().Stop("MusicForLevels");
             else FindObjectOfType<AudioManager>().Play("MusicForLevels");
-        }
+        }*/
     }
     public void OnEffectsButtonClicked()
     {

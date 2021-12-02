@@ -46,7 +46,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-      //  StartCoroutine(LoadingAnim());
+        //  StartCoroutine(LoadingAnim());
         Time.timeScale = 1;
         StartCoroutine(RequestReviews());
         if (PlayerPrefs.GetInt("FirstTimeEntered") != 1)

@@ -51,8 +51,12 @@ public class Restart : MonoBehaviour
 
     private void Start()
     {
-        forAdAnimatingButton = SaveMeForAdButton.GetComponent<AnimatingButtons>();
-        forCoinsAnimatingButton = SaveMeForCoinsButton.GetComponent<AnimatingButtons>();
+        if(SceneManager.GetActiveScene().name == "UnlimitedLevel")
+        {
+            forAdAnimatingButton = SaveMeForAdButton.GetComponent<AnimatingButtons>();
+            forCoinsAnimatingButton = SaveMeForCoinsButton.GetComponent<AnimatingButtons>();
+        }
+        
         backRestartPressed = BackButton.gameObject.GetComponent<BackRestartPressed>();
         DeathAnim = GetComponent<Animation>();
         ThreadForInternetConnection = new Thread(new ThreadStart(() =>

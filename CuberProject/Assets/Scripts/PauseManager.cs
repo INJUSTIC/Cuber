@@ -17,14 +17,16 @@ public class PauseManager : MonoBehaviour
     public Sprite EffectsIcon;
     public Sprite MusicIconCrossedOut;
     public Sprite EffectsIconCrossedOut;
-    public Sprite WhiteMusicIcon;
+    //Это для разных бэкграундов
+    /*public Sprite WhiteMusicIcon;
     public Sprite WhiteEffectsIcon;
     public Sprite WhiteMusicIconCrossedOut;
-    public Sprite WhiteEffectsIconCrossedOut;
+    public Sprite WhiteEffectsIconCrossedOut;*/
 
     private void Start()
     {
-        ColorData cl = SaveSystem.LoadColorofLand();
+        //Это для разных бэкграундов
+        /*ColorData cl = SaveSystem.LoadColorofLand();
         Color LandColor = new Color32(cl.Color[0], cl.Color[1], cl.Color[2], 255);
         if (LandColor == Color.black)
         {
@@ -46,24 +48,9 @@ public class PauseManager : MonoBehaviour
             }
         }
         else
-        {
-            if (AudioManager.EffectsState)
-            {
-                EffectIconButton.image.sprite = EffectsIcon;
-            }
-            else
-            {
-                EffectIconButton.image.sprite = EffectsIconCrossedOut;
-            }
-            if (AudioManager.MusicState)
-            {
-                MusicIconButton.image.sprite = MusicIcon;
-            }
-            else
-            {
-                MusicIconButton.image.sprite = MusicIconCrossedOut;
-            }
-        }
+        {*/
+
+        //}
     }
     public void Pause()
     {
