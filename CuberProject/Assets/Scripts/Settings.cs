@@ -113,7 +113,7 @@ public class Settings : MonoBehaviour
                 }
             case 4:
                 {
-                    lean.SetCurrentLanguage("Spain");
+                    lean.SetCurrentLanguage("Spanish");
                     break;
                 }
             case 5:

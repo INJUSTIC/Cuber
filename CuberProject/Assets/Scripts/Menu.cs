@@ -24,14 +24,15 @@ public class Menu : MonoBehaviour
     public GameObject ShopPanel;
     public GameObject AchievmentsPanel;
     public GameObject CreditsPanel;
-   /* public Button EngLang;
-    public Button RuLang;
-    public Button FraLang;
-    public Button EspLang;
-    public Button ArabLang;
-    public Button ItaLang;
-    public Button GerLang;
-    public Button ChiLang;*/
+    /* public Button EngLang;
+     public Button RuLang;
+     public Button FraLang;
+     public Button EspLang;
+     public Button ArabLang;
+     public Button ItaLang;
+     public Button GerLang;
+     public Button ChiLang;*/
+    public Transform[] Button_transforms;
     public GameObject Cube;
     public RewardedAd rewarded;
     private PlayReviewInfo _playReviewInfo;
@@ -42,18 +43,22 @@ public class Menu : MonoBehaviour
     private ReviewManager _reviewManager;
     [SerializeField]
     private GameObject RateUsPanel;
+    private const float FreeAspectWidth = 1440.0f;
     public const string AdID = "ca-app-pub-7201061393448184/4359617145"/*"ca-app-pub-3940256099942544/5224354917"*/;
 
     private void Start()
     {
-        //  StartCoroutine(LoadingAnim());
         Time.timeScale = 1;
+        //Подбираем размер кнопок
+        foreach(Transform transform in Button_transforms)
+        {
+            transform.localScale *= (Screen.width / FreeAspectWidth);
+        }
         StartCoroutine(RequestReviews());
         if (PlayerPrefs.GetInt("FirstTimeEntered") != 1)
         {
             SaveSystem.SaveTimeIsFirstEntered(DateTime.UtcNow);
             PlayerPrefs.SetInt("FirstTimeEntered", 1);
-            // PlayerPrefs.DeleteAll();
         }
         else
         {
@@ -357,41 +362,4 @@ public class Menu : MonoBehaviour
     {
         Caching.ClearCache();
     }  
-        /*switch(button.name)
-        {
-            case "ENG_Button":
-                {
-
-                    break;
-                }
-            case "RU_Button":
-                {
-                    break;
-                }
-            case "GER_Button":
-                {
-                    break;
-                }
-            case "Spain_Button":
-                {
-                    break;
-                }
-            case "ITA_Button":
-                {
-                    break;
-                }
-            case "FRA_Button":
-                {
-                    break;
-                }
-            case "China_Button":
-                {
-                    break;
-                }
-            case "Arab_Button":
-                {
-                    break;
-                }
-
-        }*/
 }

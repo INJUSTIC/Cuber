@@ -1086,7 +1086,7 @@ RectTransform:
   m_LocalScale: {x: 0.8571338, y: 0.8571338, z: 0.8571338}
   m_Children: []
   m_Father: {fileID: 1350034806}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.36169723, y: 0.58955634}
   m_AnchorMax: {x: 0.36169723, y: 0.58955634}
@@ -6276,7 +6276,7 @@ PrefabInstance:
     - target: {fileID: 2308472187712229645, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.709999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2308472187712229645, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
@@ -6408,7 +6408,7 @@ PrefabInstance:
     - target: {fileID: 4009584955767533654, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4241586532801163760, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
@@ -6469,7 +6469,7 @@ PrefabInstance:
     - target: {fileID: 4585613994840724720, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4585613994840724720, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
@@ -6509,7 +6509,7 @@ PrefabInstance:
     - target: {fileID: 4585613994840724720, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4585613994840724720, guid: edf2a4fb7f4cf55418185ff9a20700c8,
         type: 3}
@@ -9106,7 +9106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLanguage: French
+  currentLanguage: Russian
   detectLanguage: 1
   defaultLanguage: English
   saveLoad: 1

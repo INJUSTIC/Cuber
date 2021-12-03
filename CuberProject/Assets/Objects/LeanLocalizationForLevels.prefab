@@ -281,25 +281,25 @@ MonoBehaviour:
     Text: "\u8BD5\u56FE"
     Object: {fileID: 0}
   - Language: French
-    Text: Tenter
+    Text: tenter
     Object: {fileID: 0}
   - Language: German
-    Text: Versuch
+    Text: versuch
     Object: {fileID: 0}
   - Language: Italian
-    Text: Tentativo
+    Text: tentativo
     Object: {fileID: 0}
   - Language: Portuguese
-    Text: Tentar
+    Text: tentar
     Object: {fileID: 0}
   - Language: Russian
-    Text: "\u041F\u043E\u043F\u044B\u0442\u043A\u0430"
+    Text: "\u043F\u043E\u043F\u044B\u0442\u043A\u0430"
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Intento
+    Text: intento
     Object: {fileID: 0}
   - Language: English
-    Text: Attempt
+    Text: attempt
     Object: {fileID: 0}
 --- !u!1 &3396651366048492284
 GameObject:
