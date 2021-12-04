@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using Firebase;
+//using Firebase;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -50,11 +50,14 @@ public class Menu : MonoBehaviour
     {
         Time.timeScale = 1;
         //Подбираем размер кнопок
-        foreach(Transform transform in Button_transforms)
+        if(Screen.width < FreeAspectWidth)
         {
-            transform.localScale *= (Screen.width / FreeAspectWidth);
-        }
-        StartCoroutine(RequestReviews());
+            foreach (Transform transform in Button_transforms)
+            {
+                transform.localScale *= (Screen.width / FreeAspectWidth);
+            }
+        }       
+        //StartCoroutine(RequestReviews());
         if (PlayerPrefs.GetInt("FirstTimeEntered") != 1)
         {
             SaveSystem.SaveTimeIsFirstEntered(DateTime.UtcNow);
@@ -116,7 +119,8 @@ public class Menu : MonoBehaviour
         rewarded.OnAdLoaded += OnAdLoaded;
         rewarded.LoadAd(new AdRequest.Builder().Build());
     }
-    IEnumerator RequestReviews()
+    //Гугл плей вход
+    /*IEnumerator RequestReviews()
     {
         // Request a ReviewInfo object
         _reviewManager = new ReviewManager();
@@ -138,7 +142,7 @@ public class Menu : MonoBehaviour
             // Log error. For example, using requestFlowOperation.Error.ToString().
             yield break;
         }
-    }
+    }*/
     public void OnNoClicked()
     {
         RateUsPanel.SetActive(false);
@@ -340,10 +344,10 @@ public class Menu : MonoBehaviour
         MainMenuPanel.SetActive(true);
         CreditsPanel.SetActive(false);
     }
-    public void GoToCredits(string url)
+    /*public void GoToCredits(string url)
     {
         Application.OpenURL(url);
-    }
+    }*/
     private IEnumerator WaitForAdMob()
     {
         yield return new WaitForSeconds(7);

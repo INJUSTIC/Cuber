@@ -69,11 +69,11 @@ public class MovementScript : MonoBehaviour
                 rd.AddForce(SidewaySpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
                 //transform.position += new Vector3(SidewaySpeed * Time.deltaTime, 0, 0);
             }
-            if(PlayerPrefs.GetInt("Accelerator") != 1)
+            if(PlayerPrefs.GetInt("ControlType") == 1)
             {
                 rd.AddForce(SidewaySpeed * Input.acceleration.x * 4 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
             }
-            else
+            else 
             {
                 if (Input.touchCount > 0)
                 {

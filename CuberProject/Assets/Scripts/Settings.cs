@@ -9,6 +9,8 @@ public class Settings : MonoBehaviour
     public Button[] language_buttons;
     public const float ChosedSize = 2.62f;
     public const float UnChosedSize = 1.93f;
+    public Button TouchControlBut;
+    public Button TiltControlBut;
     public void Start()
     {
         SetLanguage(PlayerPrefs.GetInt("Language"));
@@ -72,6 +74,14 @@ public class Settings : MonoBehaviour
                     }
             }
         }
+        if(PlayerPrefs.GetInt("ControlType") == 1)
+        {
+            TiltControlBut.transform.localScale = new Vector2(5.84f, 3.98f);
+        }
+        else
+        {
+            TouchControlBut.transform.localScale = new Vector2(5.84f, 3.98f);
+        }
     }
     public void OnLanguageButtonClicked(Button button)
     {
@@ -90,7 +100,18 @@ public class Settings : MonoBehaviour
             }
         }
     }
-
+    public void OnTouchControlClicked()
+    {
+        TouchControlBut.transform.localScale = new Vector2(5.84f, 3.98f);
+        TiltControlBut.transform.localScale = new Vector2(3.93f, 2.68f);
+        PlayerPrefs.SetInt("ControlType", 2);
+    }
+    public void OnTiltControlClicked()
+    {
+        TiltControlBut.transform.localScale = new Vector2(5.84f, 3.98f);
+        TouchControlBut.transform.localScale = new Vector2(3.93f, 2.68f);
+        PlayerPrefs.SetInt("ControlType", 1);
+    }
     public static void SetLanguage(int language_id)
     {
         LeanLocalization lean = FindObjectOfType<LeanLocalization>();

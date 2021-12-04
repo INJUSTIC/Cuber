@@ -98,7 +98,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 9cd42aafee9bc09449d5b4310d1b64db,
+    type: 2}
   m_LightingSettings: {fileID: 1042680369}
 --- !u!196 &4
 NavMeshSettings:
@@ -4008,7 +4009,7 @@ PrefabInstance:
     - target: {fileID: 2242032104036291407, guid: 477ab29b458380542b57bf659f97167e,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 34.600006
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2242032104036291407, guid: 477ab29b458380542b57bf659f97167e,
         type: 3}
@@ -4890,7 +4891,7 @@ LightingSettings:
   m_PrefabAsset: {fileID: 0}
   m_Name: Settings.lighting
   serializedVersion: 3
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 0
   m_RealtimeEnvironmentLighting: 1
@@ -4899,8 +4900,8 @@ LightingSettings:
   m_IndirectOutputScale: 1
   m_UsingShadowmask: 1
   m_BakeBackend: 1
-  m_LightmapMaxSize: 1024
-  m_BakeResolution: 40
+  m_LightmapMaxSize: 32
+  m_BakeResolution: 50
   m_Padding: 2
   m_TextureCompression: 1
   m_AO: 0
@@ -4922,9 +4923,9 @@ LightingSettings:
   m_FinalGatherFiltering: 1
   m_PVRCulling: 1
   m_PVRSampling: 1
-  m_PVRDirectSampleCount: 32
-  m_PVRSampleCount: 500
-  m_PVREnvironmentSampleCount: 500
+  m_PVRDirectSampleCount: 1
+  m_PVRSampleCount: 8
+  m_PVREnvironmentSampleCount: 8
   m_PVREnvironmentReferencePointCount: 2048
   m_LightProbeSampleCountMultiplier: 4
   m_PVRBounces: 2
@@ -9106,7 +9107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLanguage: Russian
+  currentLanguage: English
   detectLanguage: 1
   defaultLanguage: English
   saveLoad: 1
