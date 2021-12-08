@@ -17,9 +17,11 @@ public class MovementScript : MonoBehaviour
     public float BoostEachLevel = 1f;
     //private static bool IsFirst = true;
     private int ScreenWidth = Screen.width;
+    private int control_type;
 
     private void Awake()
     {
+        control_type = PlayerPrefs.GetInt("ControlType");
         MovingObstacle.Speed = 5;
         MovingObstacle.BoostEachLevel = 1;
         LineMoving.BoostEachLevel = 1;
@@ -69,7 +71,7 @@ public class MovementScript : MonoBehaviour
                 rd.AddForce(SidewaySpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
                 //transform.position += new Vector3(SidewaySpeed * Time.deltaTime, 0, 0);
             }
-            if(PlayerPrefs.GetInt("ControlType") == 1)
+            if(control_type == 1)
             {
                 rd.AddForce(SidewaySpeed * Input.acceleration.x * 4 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
             }
